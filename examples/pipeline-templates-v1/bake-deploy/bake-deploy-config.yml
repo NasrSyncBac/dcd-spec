@@ -4,7 +4,7 @@ pipeline:
   application: orca
   name: Bake and Deploy
   template:
-    source: file://template.yml
+    source: https://raw.githubusercontent.com/NasrSyncBac/dcd-spec/master/examples/pipeline-templates-v1/bake-deploy/template.yml
   variables:
     myCustomFirstStageName: "Bake"
 stages: []
