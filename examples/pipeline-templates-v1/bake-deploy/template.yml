@@ -56,7 +56,7 @@ stages:
       healthCheckGracePeriod: 600
       healthCheckType: EC2
       iamRole: myIAMRole
-      UserData: {{ printf 'dev' > /etc/default/env }}
+      UserData: "{{ printf 'dev' > /etc/default/env }}"
       Monitoring: false
       instanceType: m3.large
       interestingHealthProviderNames:
