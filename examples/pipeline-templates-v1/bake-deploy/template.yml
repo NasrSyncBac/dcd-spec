@@ -6,6 +6,7 @@ metadata:
   description: Example bake and deploy template
 variables:
 - name: myCustomFirstStageName
+- UserData : printf 'dev' > /etc/default/env
 stages:
 - id: bake1
   type: bake
@@ -55,7 +56,8 @@ stages:
       healthCheckGracePeriod: 600
       healthCheckType: EC2
       iamRole: myIAMRole
-      instanceMonitoring: false
+      UserData: {{ printf 'dev' > /etc/default/env }}
+      Monitoring: false
       instanceType: m3.large
       interestingHealthProviderNames:
       - Amazon
