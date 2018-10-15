@@ -6,7 +6,7 @@ metadata:
   description: Example bake and deploy template
 variables:
 - name: myCustomFirstStageName
-- UserData : printf 'dev' > /etc/default/env
+- UserData: printf 'dev' > /etc/default/env
 stages:
 - id: bake1
   type: bake
